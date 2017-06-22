@@ -1,0 +1,36 @@
+" tabulation
+set shiftwidth=2
+
+if match($TERM, "screen")!=-1
+  colorscheme pablo
+else
+  " theme configuration
+  set background=dark
+  set termguicolors
+  colorscheme quantum
+
+  " quantum theme configuration
+  let g:quantum_italics=1
+end
+
+" line number
+set norelativenumber
+
+" vim-bookmarks
+let g:bookmark_show_warning=0
+let g:bookmark_show_toggle_warning=0
+let g:bookmark_no_default_key_mappings=0
+
+" move NERDTree to right
+let g:NERDTreeWinPos="right"
+
+" change NERDTree custom size
+let g:NERDTreeWinSize=40
+
+" start NERDTree with vim
+autocmd vimenter * NERDTree
+autocmd vimenter * wincmd p
+
+" startify
+let g:startify_files_number=3
+let g:startify_bookmarks=[ {'m': '~/proto/main.cpp'}, {'v': '~/.vimrc.postconf'}, {'z': '~/.zshrc.postconf'}, {'i': '~/.i3/config'}, {'s': '~/.screenrc'} ]

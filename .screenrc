@@ -1,0 +1,19 @@
+# Turn off that annoying start up message
+startup_message off
+
+# disable vertical bars in splited windows
+rendition so "="
+
+# Turn the even more annoying whole-screen-flash-on-tab-complete "feature"
+vbell off
+
+defbce on
+altscreen on
+
+# personalize the statusline
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+
+# enable X scrolling mechanism
+termcapinfo xterm* ti@:te@

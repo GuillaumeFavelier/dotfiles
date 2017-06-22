@@ -1,0 +1,42 @@
+# User config
+
+# add home bin to the PATH
+export PATH=/home/guillaume/bin:$PATH
+
+# add ccache to the PATH
+export PATH=/usr/lib/ccache:$PATH
+
+# user variables
+export TTK_PATH="/home/guillaume/source/TTK/ttk-guillaume"
+PV_PATH="/home/guillaume/source/ParaView/paraview"
+export PV_PLUGIN_PATH="/home/guillaume/source/ParaView/plugins"
+export ParaView_DIR=$PV_PATH"/build"
+export VTK_DIR=/home/guillaume/source/vtk/build
+
+# user aliases
+alias emacs='emacs -nw'
+alias cdx="cd /home/guillaume/source/TTK/ttk-guillaume"
+alias pv=$PV_PATH"/install/bin/paraview"
+alias docker_cleanc='docker rm $(docker ps -a -q)'
+alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
+alias docker_deli='docker rmi $(docker images -q)'
+
+# store the screen sessions in here
+export SCREEN_SESSIONS_PATH="/home/guillaume/.screen/sessions"
+# detect if gnu screen is used
+if [[ $TERM =~ 'screen' ]]; then
+  local screen_parsed_file=${STY#[0-9]*.}
+  local screen_session_file=$SCREEN_SESSIONS_PATH/$screen_parsed_file
+  if [ -f $screen_session_file ]; then
+    if [ ! -f /tmp/$STY ]; then
+      local screen_load_answer=""
+      echo -n '['$screen_parsed_file'] session file detected, do you want to load it? [y/n] : '
+      read screen_load_answer
+      if [[ $screen_load_answer == "y" ]]; then
+        clear
+        screen -X source $screen_session_file
+        touch /tmp/$STY
+      fi
+    fi
+  fi
+fi
