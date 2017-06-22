@@ -1,9 +1,6 @@
 " versioning
 call dein#add('mhinz/vim-signify')
 call dein#add('tyrannicaltoucan/vim-quantum')
-"call dein#add('NLKNguyen/papercolor-theme')
-"call dein#add('dikiaap/minimalist')
-"call dein#add('google/vim-colorscheme-primary')
 call dein#disable('numbers.vim')
 call dein#disable('syntastic')
 call dein#disable('rainbow')
