@@ -6,9 +6,15 @@ export PATH=/home/guillaume/bin:$PATH
 # add ccache to the PATH
 export PATH=/usr/lib/ccache:$PATH
 
+# add cargo to the PATH
+export PATH=$PATH:$HOME/.cargo/bin
+
 ### User variables ###
 # Source directory
 SRC_PATH="/home/guillaume/source"
+
+export QT_SELECT="5"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # TTK variables
 export TTK_PATH=$SRC_PATH"/ttk/ttk-guillaume"
