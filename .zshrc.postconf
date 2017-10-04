@@ -4,7 +4,10 @@
 export PATH=/home/guillaume/bin:$PATH
 
 # add ccache to the PATH
-export PATH=/usr/lib/ccache:$PATH
+#export PATH=/usr/lib/ccache:$PATH
+
+# Firefox-nightly : disable GC Poisoning
+#export JSGC_DISABLE_POISONING=1
 
 # add cargo to the PATH
 export PATH=$PATH:$HOME/.cargo/bin
