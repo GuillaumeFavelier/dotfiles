@@ -187,3 +187,14 @@ new_window pixel 2
 
 # disable focus by mouse hover
 focus_follows_mouse off
+
+# user modified options
+bindsym $mod+F1 exec alienware-kbl-change
+bindsym $mod+F2 exec firefox-central
+bindsym $mod+F4 exec amixer -q sset Master 5%-
+bindsym $mod+F5 exec amixer -q sset Master 5%+
+bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
+bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
+bindsym $mod+F12 exec alienware-kbl --change
+exec --no-startup-id feh --bg-scale /home/guillaume/configs/intel_motherboard.jpg &
+exec --no-startup-id compton --config=/home/guillaume/configs/.compton.conf &
