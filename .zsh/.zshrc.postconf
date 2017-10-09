@@ -14,18 +14,18 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 ### User variables ###
 # Source directory
-SRC_PATH="/home/guillaume/source"
+SRC_PATH=$HOME/source
 
 # TTK variables
-export TTK_PATH=$SRC_PATH"/ttk/ttk-guillaume"
+export TTK_PATH=$SRC_PATH/ttk/ttk-guillaume
 
 # ParaView variables
-PV_PATH=$SRC_PATH"/paraview"
-export PV_PLUGIN_PATH=$PV_PATH"/plugins"
-export ParaView_DIR=$PV_PATH"/build"
+PV_PATH=$SRC_PATH/paraview
+export PV_PLUGIN_PATH=$PV_PATH/plugins
+export ParaView_DIR=$PV_PATH/build
 
 # VTK variables
-export VTK_DIR=$SRC_PATH"/vtk/build"
+export VTK_DIR=$SRC_PATH/vtk/build
 
 # Firefox central variable
 export MOZCONFIG=$HOME/.mozconfig
@@ -38,7 +38,7 @@ alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'
 
 # store the screen sessions in here
-export SCREEN_SESSIONS_PATH="/home/guillaume/.screen/sessions"
+export SCREEN_SESSIONS_PATH=$HOME/.screen/sessions
 # detect if gnu screen is used
 if [[ $TERM =~ 'screen' ]]; then
   local screen_parsed_file=${STY#[0-9]*.}
