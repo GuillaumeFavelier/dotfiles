@@ -34,9 +34,7 @@ bindsym $mod+KP_Add exec amixer -c 0 -- sset Master playback 1%+
 bindsym $mod+Return exec i3-sensible-terminal
 
 # lock screen
-#bindsym $mod+l exec i3lock --image=/home/guillaume/Images/Wallpaper/wallpaper_enzo.png
-#bindsym $mod+l exec i3lock --image=/home/guillaume/Images/Wallpaper/part1+2_1920x1080.png
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec ~/dotfiles/.script/lock.sh
 #bindsym $mod+l exec xtrlock
 
 # kill focused window
