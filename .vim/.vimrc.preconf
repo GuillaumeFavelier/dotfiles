@@ -1,3 +1,4 @@
+let g:margin_position=80
 call insert(g:Vimmic_ADDED, {'name': 'tyrannicaltoucan/vim-quantum'})
 call insert(g:Vimmic_DISABLED, 'numbers.vim')
 call insert(g:Vimmic_DISABLED, 'syntastic')

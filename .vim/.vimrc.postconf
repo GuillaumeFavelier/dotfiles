@@ -27,10 +27,6 @@ let g:NERDTreeWinPos="right"
 " change NERDTree custom size
 let g:NERDTreeWinSize=40
 
-" start NERDTree with vim
-autocmd vimenter * NERDTree
-autocmd vimenter * wincmd p
-
 " startify
 let g:startify_files_number=3
-let g:startify_bookmarks=[ {'m': '~/proto/main.cpp'}, {'v': '~/.vimrc.postconf'}, {'z': '~/.zshrc.postconf'}, {'i': '~/.config/i3/config'}, {'s': '~/.screenrc'} ]
+let g:startify_bookmarks=[ {'m': '~/proto/main.cpp'},{'v': '~/.vim/.vimrc.postconf'},{'z': '~/.zsh/.zshrc.postconf'},{'i': '~/.config/i3/config'},{'s': '~/.screenrc'} ]

@@ -1,0 +1,3 @@
+exec vim
+chdir $TTK_PATH/build
+screen
