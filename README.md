@@ -1,6 +1,8 @@
-# Dependencies
+Dependencies
+------------
 In order to use these configuration files, you must install some dependencies. For archlinux distribution: `i3-wm dmenu i3status feh compton dunst libnotify scort imagemagick`
 
-# ToDo
+ToDo
+----
 + automatic installation script
 
