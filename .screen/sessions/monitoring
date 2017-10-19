@@ -4,9 +4,6 @@ resize 82
 screen watch -n10 nvidia-smi
 split
 focus
-screen watch -n60 df -h
-split
-focus
 screen nload
 focus
 exec htop
