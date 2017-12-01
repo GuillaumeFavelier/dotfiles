@@ -1,1 +1,10 @@
-let g:margin_position=80
+let g:MarginPos=80
+let g:MarginBG="Black"
+
+" True colors example
+let g:StatusNormalFG="#fafafa"
+let g:StatusInsertFG="#2196f3"
+let g:StatusReplaceFG="#f44336"
+autocmd VimEnter * highlight StatusLineLeft guibg=#2196f3 guifg=Black
+autocmd VimEnter * highlight StatusLine guibg=#263238
+autocmd VimEnter * highlight StatusLineNC guifg=#162228

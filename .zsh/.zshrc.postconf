@@ -32,7 +32,8 @@ export MOZCONFIG=$HOME/.mozconfig
 
 ### User aliases ###
 alias emacs='emacs -nw'
-alias pv=$PV_PATH"/install/bin/paraview"
+alias paraview=$PV_PATH"/install/bin/paraview"
+alias pvpython=$PV_PATH"/install/bin/pvpython"
 alias docker_cleanc='docker rm $(docker ps -a -q)'
 alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'

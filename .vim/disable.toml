@@ -6,6 +6,3 @@ repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo = 'kien/rainbow_parentheses.vim'
-
-[[plugins]]
-repo = 'vim-airline/vim-airline'
