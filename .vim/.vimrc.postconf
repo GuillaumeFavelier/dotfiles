@@ -1,17 +1,7 @@
 " tabulation
 set shiftwidth=2
 
-if match($TERM, "screen")!=-1
-  colorscheme pablo
-else
-  " theme configuration
-  set background=dark
-  set termguicolors
-  colorscheme quantum
-
-  " quantum theme configuration
-  let g:quantum_italics=1
-end
+colorscheme default
 
 " vim-bookmarks
 let g:bookmark_show_warning=0
