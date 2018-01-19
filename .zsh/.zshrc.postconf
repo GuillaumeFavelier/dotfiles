@@ -11,7 +11,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 SRC_PATH=$HOME/source
 
 # TTK variables
-export TTK_PATH=$SRC_PATH/ttk/ttk-guillaume
+#export TTK_PATH=$SRC_PATH/ttk/ttk-guillaume/source
 
 # ParaView variables
 PV_PATH=$SRC_PATH/paraview
@@ -26,8 +26,8 @@ export MOZCONFIG=$HOME/.mozconfig
 
 ### User aliases ###
 alias emacs='emacs -nw'
-#alias paraview=$PV_PATH"/install/bin/paraview"
-#alias pvpython=$PV_PATH"/install/bin/pvpython"
+alias paraview=$PV_PATH"/install/bin/paraview"
+alias pvpython=$PV_PATH"/install/bin/pvpython"
 alias docker_cleanc='docker rm $(docker ps -a -q)'
 alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'
