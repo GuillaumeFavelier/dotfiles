@@ -8,7 +8,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 ### User variables ###
 # Source directory
-SRC_PATH=$HOME/source
+export SRC_PATH=$HOME/source
 
 # TTK variables
 #export TTK_PATH=$SRC_PATH/ttk/ttk-guillaume/source
@@ -32,6 +32,36 @@ alias docker_cleanc='docker rm $(docker ps -a -q)'
 alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'
 
+### Auto-updated sources ###
+export AUTO_UPDATE_FILE=/tmp/auto_update.log
+if [ -f $AUTO_UPDATE_FILE ]; then
+  packages=$(cat $AUTO_UPDATE_FILE 2> /dev/null)
+  numberOfUpdates=$(wc -l $AUTO_UPDATE_FILE 2> /dev/null | cut -f1 -d\ )
+  if [ $numberOfUpdates -ge 1 ]; then
+    local auto_update_answer=""
+    echo $packages
+    echo -n 'The packages above need to be updated, do you want to proceed? [y/n] : '
+    read auto_update_answer
+    if [[ $auto_update_answer == "y" ]]; then
+      saved_dir=$(pwd)
+
+      for package in $(cat $AUTO_UPDATE_FILE); do
+        cd $package
+        git pull
+
+        echo $package
+        if [ -f 'PKGBUILD' ]; then
+          makepkg -si
+        fi
+      done
+
+      # return to original directory
+      cd $saved_dir
+    fi
+  fi
+fi
+
+### GNU Screen ###
 # store the screen sessions in here
 export SCREEN_SESSIONS_PATH=$HOME/.screen/sessions
 # detect if gnu screen is used
