@@ -33,8 +33,10 @@ alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'
 
 ### Auto-updated sources ###
+waitingTime='3600'
 export AUTO_UPDATE_FILE=/tmp/auto_update.log
-if [ -f $AUTO_UPDATE_FILE ]; then
+export AUTO_UPDATE_LOCK=/tmp/auto_update.lock
+if [ ! -f $AUTO_UPDATE_LOCK ] && [ -f $AUTO_UPDATE_FILE ]; then
   packages=$(cat $AUTO_UPDATE_FILE 2> /dev/null)
   numberOfUpdates=$(wc -l $AUTO_UPDATE_FILE 2> /dev/null | cut -f1 -d\ )
   if [ $numberOfUpdates -ge 1 ]; then
@@ -47,18 +49,41 @@ if [ -f $AUTO_UPDATE_FILE ]; then
 
       for package in $(cat $AUTO_UPDATE_FILE); do
         cd $package
-        git pull
-
         echo $package
+
+        # AUR build
         if [ -f 'PKGBUILD' ]; then
+          git pull
           makepkg -si
+        else
+          # project with CMakeLists.txt
+          name=${PWD##*/}
+          if [[ $name == 'source' ]] && [[ -f 'CMakeLists.txt' ]]; then
+            git pull
+
+            # move to build directory
+            cd ../build
+
+            # build with ninja
+            if [ -f 'build.ninja' ]; then
+              ninja install
+            elif [ -f 'Makefile' ]; then
+              ncores=$(grep -c 'processor' /proc/cpuinfo)
+              make -j $ncores && make install
+            fi
+          fi
         fi
       done
 
       # return to original directory
       cd $saved_dir
+    elif [[ $auto_update_answer == "n" ]]; then
+      touch $AUTO_UPDATE_LOCK
+      (sleep $waitingTime && rm -f $AUTO_UPDATE_LOCK 2> /dev/null)&
     fi
   fi
+
+  echo -n '' > $AUTO_UPDATE_FILE
 fi
 
 ### GNU Screen ###

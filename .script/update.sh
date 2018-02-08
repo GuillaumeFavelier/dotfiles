@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -n "" > $AUTO_UPDATE_FILE
+echo -n '' > $AUTO_UPDATE_FILE
 
 excludePath=$HOME/dotfiles
 excludeFileName='.exclude'
@@ -19,18 +19,28 @@ do
   # move to the target directory
   cd $current
 
+  if [ ! -d .git ]; then
+    if [ -d 'source' ]; then
+      current=$current/source
+      cd $current
+    else
+      echo 'Error: neither a source directory or a git repository.'
+      continue
+    fi
+  fi
+
   # update tracking refs
   ret=$(git remote update)
   if [ $? -ne 0 ]
   then
-    echo "Error: problem during refs tracking:"
+    echo 'Error: problem during refs tracking.'
     continue
   fi
 
   res=$(git rev-parse --abbrev-ref HEAD)
   if [ $res != 'master' ]
   then
-    echo "Error: not on master."
+    echo 'Error: not on master.'
     continue
   fi
 
