@@ -53,7 +53,7 @@ if [ ! -f $AUTO_UPDATE_LOCK ] && [ -f $AUTO_UPDATE_FILE ]; then
 
         # AUR build
         if [ -f 'PKGBUILD' ]; then
-          git pull
+          git pull origin master
           makepkg -si
         else
           # project with CMakeLists.txt
