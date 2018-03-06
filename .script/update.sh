@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/zsh
 
 echo -n '' > $AUTO_UPDATE_FILE
 
