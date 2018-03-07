@@ -1,6 +1,8 @@
 " tabulation
 set shiftwidth=2
 
+colorscheme default
+
 " vim-bookmarks
 let g:bookmark_show_warning=0
 let g:bookmark_show_toggle_warning=0
