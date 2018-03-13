@@ -1,18 +1,22 @@
 #!/usr/bin/zsh
 
+# upgrade environment
+source $HOME/.zshrc
+
 echo -n '' > $AUTO_UPDATE_FILE
 
 excludePath=$HOME/dotfiles
 excludeFileName='.exclude'
 excludeFile=$excludePath/$excludeFileName
-excludeList=$(cat $excludeFile)
-args="-I $excludeFile "
-for i in $excludeList
+for i in $(cat $excludeFile)
 do
   args+=$(echo -n '-I' $i' ')
 done
 
-for i in $(ls $SRC_PATH $args)
+ls_cmd="ls $SRC_PATH $args"
+packageList=''
+
+for i in $(eval $ls_cmd)
 do
   current=$SRC_PATH/$i
 
@@ -49,7 +53,13 @@ do
 
   if [[ $res = *"behind"* ]] && [[ $res = *"fast-forward"* ]]
   then
-    echo $current
+    packageList+=$i' '
     echo $current >> $AUTO_UPDATE_FILE
   fi
 done
+
+toNotify=$(wc -l $AUTO_UPDATE_FILE | cut -f1 -d \  )
+if [ $toNotify -gt 0 ]
+then
+  notify-send $packageList
+fi

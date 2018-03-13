@@ -56,11 +56,12 @@ if [ ! -f $AUTO_UPDATE_LOCK ] && [ -f $AUTO_UPDATE_FILE ]; then
           git pull origin master
           makepkg -si
         else
+          git pull
+          git submodule update --init
+
           # project with CMakeLists.txt
           name=${PWD##*/}
           if [[ $name == 'source' ]] && [[ -f 'CMakeLists.txt' ]]; then
-            git pull
-
             # move to build directory
             cd ../build
 
