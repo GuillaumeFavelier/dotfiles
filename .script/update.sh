@@ -1,5 +1,10 @@
 #!/usr/bin/zsh
 
+# make display available
+export DISPLAY=:0
+
+notify-send 'auto-updating source packages...'
+
 # upgrade environment
 source $HOME/.zshrc
 
@@ -13,10 +18,11 @@ do
   args+=$(echo -n '-I' $i' ')
 done
 
-ls_cmd="ls $SRC_PATH $args"
 packageList=''
 
-for i in $(eval $ls_cmd)
+# remove all fancy options on ls
+alias ls=ls
+for i in $(ls $SRC_PATH $args)
 do
   current=$SRC_PATH/$i
 

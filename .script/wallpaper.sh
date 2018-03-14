@@ -6,7 +6,7 @@ hour=$(date +%H)
 # hours of the day (end_of_night midday beginning_of_night)
 timeframe=(6 12 18)
 
-# make display variable
+# make display available
 export DISPLAY=:0
 
 # cmd that changes the background
