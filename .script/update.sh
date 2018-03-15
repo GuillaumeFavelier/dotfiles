@@ -3,7 +3,7 @@
 # make display available
 export DISPLAY=:0
 
-notify-send 'auto-updating source packages...'
+notify-send 'checking source packages...'
 
 # upgrade environment
 source $HOME/.zshrc
