@@ -81,5 +81,11 @@ done
 toNotify=$(wc -l $AUTO_UPDATE_FILE | cut -f1 -d \  )
 if [ $toNotify -gt '0' ]
 then
-  notify-send -u normal 'System' $packageList
+  notify-send -u normal 'System update' 'Custom Packages: '$packageList
+fi
+
+nbupdates=$(checkupdates | wc -l)
+if [ $nbupdates -gt '1' ]
+then
+  notify-send -u normal 'System update' 'Base packages: '$nbupdates
 fi
