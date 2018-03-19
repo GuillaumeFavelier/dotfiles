@@ -80,6 +80,7 @@ if [ ! -f $AUTO_UPDATE_LOCK ] && [ -f $AUTO_UPDATE_FILE ]; then
       cd $saved_dir
     elif [[ $auto_update_answer == "n" ]]; then
       touch $AUTO_UPDATE_LOCK
+      notify-send -u low 'System' "packages auto-install delayed for %waitingTime s."
       (sleep $waitingTime && rm -f $AUTO_UPDATE_LOCK 2> /dev/null)&
     fi
   fi

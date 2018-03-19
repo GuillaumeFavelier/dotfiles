@@ -3,7 +3,7 @@
 # make display available
 export DISPLAY=:0
 
-notify-send -u normal 'System' 'Checking source packages...'
+notify-send -u low 'System' 'Checking source packages...'
 
 # upgrade environment
 source $HOME/.zshrc
