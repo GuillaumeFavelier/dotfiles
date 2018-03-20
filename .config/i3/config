@@ -176,9 +176,14 @@ bar {
   }
 }
 
-# Some colors
-# class		border	backgr.	text	indicator
-client.focused 	#00ddff	#00ddff	#000000	#00ddff
+# Windows decoration colors
+# class                 border  backgr. text    indicator
+client.placeholder      #263238 #263238 #242424
+client.background       #263238 #263238 #242424
+client.focused          #263238 #00aaff #e5e5e5 #4A4A4A
+client.unfocused        #263238 #263238 #777777 #222222
+client.focused_inactive #263238 #263238 #a9a9a9 #222222
+client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
 # disable title bar
 new_window pixel 2
@@ -194,5 +199,4 @@ bindsym $mod+F5 exec amixer -q sset Master 5%+
 bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
 bindsym $mod+F12 exec alienware-kbl --change
-exec --no-startup-id feh --bg-scale ~/dotfiles/.data/intel_motherboard.jpg &
 exec --no-startup-id compton --config ~/dotfiles/.compton.conf &
