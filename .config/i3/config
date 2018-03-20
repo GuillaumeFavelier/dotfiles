@@ -178,12 +178,12 @@ bar {
 
 # Windows decoration colors
 # class                 border  backgr. text    indicator
-client.placeholder      #263238 #263238 #242424
-client.background       #263238 #263238 #242424
+# client.placeholder      #263238 #263238 #242424
+# client.background       #263238 #263238 #242424
 client.focused          #263238 #00aaff #e5e5e5 #4A4A4A
-client.unfocused        #263238 #263238 #777777 #222222
-client.focused_inactive #263238 #263238 #a9a9a9 #222222
-client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+# client.unfocused        #263238 #263238 #777777 #222222
+# client.focused_inactive #263238 #263238 #a9a9a9 #222222
+# client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
 # disable title bar
 new_window pixel 2
