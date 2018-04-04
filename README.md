@@ -22,5 +22,6 @@ vifm
 
 ToDo
 ----
-+ automatic installation script
+- [x] scripts for auto-detection of updates with notifications
+- [ ] automatic installation script
 
