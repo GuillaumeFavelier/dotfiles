@@ -1,8 +1,22 @@
 Dependencies
 ------------
-In order to use these configuration files, you must install some dependencies. 
+In order to use these configuration files, you must install some dependencies.
 
-For the archlinux distribution: `i3-wm dmenu i3status feh compton dunst libnotify scrot imagemagick htop screen nitrogen`
+For the archlinux distribution:
+`i3-wm
+dmenu
+i3status
+feh
+compton
+libnotify
+dunst
+scrot
+imagemagick
+htop
+screen
+nitrogen
+zathura
+vifm`
 
 ToDo
 ----
