@@ -33,7 +33,7 @@ alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'
 
 ### Auto-updated sources ###
-waitingTime='3600'
+waitingTime='300'
 export AUTO_UPDATE_FILE=/tmp/auto_update.log
 export AUTO_UPDATE_LOCK=/tmp/auto_update.lock
 if [ ! -f $AUTO_UPDATE_LOCK ] && [ -f $AUTO_UPDATE_FILE ]; then
@@ -80,7 +80,7 @@ if [ ! -f $AUTO_UPDATE_LOCK ] && [ -f $AUTO_UPDATE_FILE ]; then
       cd $saved_dir
     elif [[ $auto_update_answer == "n" ]]; then
       touch $AUTO_UPDATE_LOCK
-      notify-send -u low 'System' "packages auto-install delayed for %waitingTime s."
+      notify-send -u low 'System' "packages auto-install delayed for $waitingTime s."
       (sleep $waitingTime && rm -f $AUTO_UPDATE_LOCK 2> /dev/null)&
     fi
   fi
