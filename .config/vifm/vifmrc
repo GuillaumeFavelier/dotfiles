@@ -6,7 +6,7 @@ filetype *.pdf zathura %f 2>/dev/null &
 
 filetype *.html firefox-nightly %f 2> /dev/null &
 
-fileviewer *.tar,*.tar.gz
+fileviewer *.tar,*.tar.gz,*.tgz
  \ tar -tvf %c
 
 fileviewer *.png,*.jpeg,*.jpg
