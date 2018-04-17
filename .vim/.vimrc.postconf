@@ -16,3 +16,6 @@ let g:NERDTreeWinSize=40
 
 " startify
 let g:startify_files_number=3
+
+" add a reset command
+:command ReStartify %bd|Startify
