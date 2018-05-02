@@ -23,6 +23,6 @@ vifm
 ToDo
 ----
 - [x] basic scripts for auto-detection of updates with notifications
-- [ ] clean the scripts and add configuration variables
+- [x] clean the scripts and add configuration variables
 - [ ] automatic installation script
 
