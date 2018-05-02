@@ -1,5 +1,11 @@
 #!/usr/bin/zsh
 
+## Configuration variables ##
+# path to the data
+data_path=$HOME/dotfiles/.data/firewatch
+# name of the wallpaper files
+data_list=(firewatch_morning.jpg firewatch_afternoon.jpg firewatch_night.jpg)
+
 # get the current hour
 hour=$(date +%H)
 
@@ -14,11 +20,6 @@ export DISPLAY=$(ps -u $(id -u) -o pid= | \
 
 # cmd that changes the background
 cmd='nitrogen --set-zoom-fill'
-
-# path to the data
-data_path=$HOME/dotfiles/.data/firewatch
-# name of the wallpaper files
-data_list=(firewatch_morning.jpg firewatch_afternoon.jpg firewatch_night.jpg)
 
 if [ $hour -ge ${timeframe[1]} ] && [ $hour -lt ${timeframe[2]} ]
 then
