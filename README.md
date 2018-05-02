@@ -16,14 +16,14 @@ zathura
 ```
 
 Depending on the script you want to use, you must install some dependencies too:
--update
+- update
 ```
 cronie
 dunst
 libnotify
 ```
 
--screen
+- screen
 ```
 screen
 htop
@@ -31,14 +31,14 @@ nload
 nvidia-smi
 ```
 
--lock
+- lock
 ```
 i3lock
 imagemagick
 scrot
 ```
 
--wallpaper
+- wallpaper
 ```
 nitrogen
 ```
@@ -54,11 +54,14 @@ system updates.
 
 You can add this script to a cron table and if the correct dependencies are installed, notifications
 will be sent. For example, to check for updates every hour:
+
 `0 * * * * $HOME/dotfiles/.script/update.sh --scan`
+
 Notice the `--scan` argument which is sent to specify that you want to check for update.
 
 Optionally, an automatic installation procedure is applied as soon as updates are detected
 if you source this script from your .zshrc file like the following:
+
 `source $HOME/dotfiles/.script/update.sh`
 
 - **screen**
