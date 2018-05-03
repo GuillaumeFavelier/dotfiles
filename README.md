@@ -48,6 +48,7 @@ Scripts
 Several scripts are also provided to make your life happier:
 
 - **update**
+
 This script typically visits source directories to check for updates. It currently support `git` and `zsh`
 and is able to check in particular Arch User Repositories (AUR) or other git versioned repositories and
 system updates.
