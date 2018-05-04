@@ -32,8 +32,11 @@ alias docker_cleanc='docker rm $(docker ps -a -q)'
 alias docker_cleani='docker rmi $(docker images -q -f dangling=true)'
 alias docker_deli='docker rmi $(docker images -q)'
 
+# zscripts user variables
+export ZSCRIPTS_CONFIG_FILE=$HOME/dotfiles/.zscripts.conf
+
 ### Auto-updated sources ###
-source $HOME/dotfiles/.script/update.sh
+source $HOME/dotfiles/zscripts/update.sh
 
 ### GNU Screen ###
-source $HOME/dotfiles/.script/screen.sh
+source $HOME/dotfiles/zscripts/screen.sh
