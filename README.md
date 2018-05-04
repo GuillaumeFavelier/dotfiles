@@ -1,3 +1,5 @@
+# `dotfiles`
+
 This set of environment configuration files and scripts is designed for linux Arch users.
 
 Dependencies
