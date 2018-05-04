@@ -117,7 +117,7 @@ then
           echo $packages
           echo -n 'The packages above need to be updated, do you want to proceed? [y/n] : '
           read auto_update_answer
-          if [ $auto_update_answer == 'y' ]
+          if [ $auto_update_answer = 'y' ]
           then
             saved_dir=$(pwd)
 
@@ -154,11 +154,11 @@ then
 
             # return to original directory
             cd $saved_dir
-          elif [ $auto_update_answer == 'n' ]
+          elif [ $auto_update_answer = 'n' ]
           then
             touch $autoUpdateLock
 
-            if [ $enableNotification == 'yes']
+            if [ $enableNotification = 'yes']
             then
               notify-send -u low 'System' "packages auto-install delayed for $waitingTime s."
             fi
