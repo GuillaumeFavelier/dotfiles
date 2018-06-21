@@ -2,7 +2,7 @@ colorscheme zenburn_1
 
 filetype *.jpg,*.jpeg,*.png,*.gif feh %f 2>/dev/null &
 
-filetype *.pdf zathura %f 2>/dev/null &
+filetype *.epub,*.pdf zathura %f 2>/dev/null &
 
 filetype *.html firefox-nightly %f 2> /dev/null &
 
