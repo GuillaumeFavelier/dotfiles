@@ -34,7 +34,7 @@ bindsym $mod+KP_Add exec amixer -c 0 -- sset Master playback 1%+
 bindsym $mod+Return exec i3-sensible-terminal
 
 # lock screen
-bindsym $mod+l exec $HOME/dotfiles/zscripts/lock.sh
+bindsym $mod+l exec $HOME/source/zscripts/lock.sh
 
 # kill focused window
 bindsym $mod+q kill
