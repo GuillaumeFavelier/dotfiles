@@ -35,8 +35,5 @@ alias docker_deli='docker rmi $(docker images -q)'
 # zscripts user variables
 export ZSCRIPTS_CONFIG_FILE=$HOME/dotfiles/.zscripts.conf
 
-### Auto-updated sources ###
-source $HOME/dotfiles/zscripts/update.sh
-
 ### GNU Screen ###
-source $HOME/dotfiles/zscripts/screen.sh
+source $HOME/source/zscripts/screen.sh
