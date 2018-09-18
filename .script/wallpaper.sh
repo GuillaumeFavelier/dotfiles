@@ -13,10 +13,10 @@ hour=$(date +%H)
 timeframe=(6 12 18)
 
 # make display available
-export DISPLAY=$(ps -u $(id -u) -o pid= | \
-  while read pid; do
-    cat /proc/$pid/environ 2>/dev/null | tr '\0' '\n' | grep '^DISPLAY=:'
-  done | grep -o ':[0-9]*' | sort -u)
+DBUS_SESSION_BUS_ADDRESS=$(ps -u $(id -u) -o pid= | while read pid; do
+  cat /proc/$pid/environ 2>/dev/null | tr '\0' '\n' | grep '^DBUS_SESSION_BUS_ADDRESS';
+done | sort -u | grep user | grep -v ,)
+export DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS#*=}
 
 # cmd that changes the background
 cmd='nitrogen --set-zoom-fill'
