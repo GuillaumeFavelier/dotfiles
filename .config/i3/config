@@ -198,6 +198,6 @@ bindsym $mod+F4 exec amixer -q sset Master 5%-
 bindsym $mod+F5 exec amixer -q sset Master 5%+
 bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
-bindsym $mod+F12 exec alienware-kbl --change
+bindsym $mod+F12 exec akbl --change
 exec --no-startup-id feh --bg-scale $HOME/dotfiles/.data/intel_motherboard.jpg &
 exec --no-startup-id compton --config $HOME/dotfiles/.compton.conf &
