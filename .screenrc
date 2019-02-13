@@ -1,7 +1,3 @@
-# Use ALT-a instead of CLT-a
-escape ^||
-bindkey "^[a" command
-
 # Turn off that annoying start up message
 startup_message off
 
