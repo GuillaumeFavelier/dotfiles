@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/guillaume/source/vispy/examples/basics/gloo'
+let g:netrw_dirhist_2='/home/guillaume/source/mne-python/mne/viz/backends/__pycache__'
+let g:netrw_dirhist_3='/home/guillaume'
+let g:netrw_dirhist_4='/home/guillaume/.local'
+let g:netrw_dirhist_5='/home/guillaume'
