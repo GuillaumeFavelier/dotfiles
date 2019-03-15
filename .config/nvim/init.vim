@@ -17,6 +17,7 @@ if dein#load_state('~/.vim/dein')
 	call dein#add('tyrannicaltoucan/vim-quantum')
 	call dein#add('fneu/breezy')
 	call dein#add('ayu-theme/ayu-vim')
+	call dein#add('whatyouhide/vim-gotham')
 	" rust stl
   call dein#add('rust-lang/rust.vim')
   call dein#add('racer-rust/vim-racer')
@@ -48,7 +49,7 @@ set tabstop=2
 set shiftwidth=2
 set background=dark
 set termguicolors
-colorscheme quantum
+colorscheme gotham
 
 " autostart
 autocmd BufWritePost *.py call Flake8()
