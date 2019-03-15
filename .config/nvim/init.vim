@@ -24,7 +24,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('scrooloose/nerdtree')
 	" line of numbers
   call dein#add('myusuf3/numbers.vim')
-	" add language server protocol support
+	" add language server protocol support: https://langserver.org/
 	call dein#add('autozimu/LanguageClient-neovim', {
     \ 'rev': 'next',
     \ 'build': 'bash install.sh',
