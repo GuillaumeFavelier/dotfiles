@@ -7,6 +7,7 @@ Dependencies
 In order to use the configuration files, you must install some dependencies:
 
 ```
+conky
 compton
 dmenu
 feh

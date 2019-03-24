@@ -31,10 +31,10 @@ bindsym $mod+KP_Subtract exec amixer -c 0 -- sset Master playback 1%-
 bindsym $mod+KP_Add exec amixer -c 0 -- sset Master playback 1%+
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # lock screen
-bindsym $mod+l exec $HOME/source/zscripts/lock.sh
+bindsym $mod+l exec i3lock -fo
 
 # kill focused window
 bindsym $mod+q kill
@@ -191,13 +191,20 @@ new_window pixel 2
 # disable focus by mouse hover
 focus_follows_mouse off
 
+### i3-gaps options ###
+# Set inner/outer gaps
+gaps inner 14
+gaps outer -2
+
+# Samrt gaps
+smart_gaps on
+
 # user modified options
-bindsym $mod+F1 exec alienware-kbl-change
-bindsym $mod+F2 exec firefox-central
 bindsym $mod+F4 exec amixer -q sset Master 5%-
 bindsym $mod+F5 exec amixer -q sset Master 5%+
 bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
-bindsym $mod+F12 exec akbl --change
-exec --no-startup-id feh --bg-scale $HOME/dotfiles/.data/intel_motherboard.jpg &
-exec --no-startup-id compton --config $HOME/dotfiles/.compton.conf &
+exec --no-startup-id conky -c $HOME/source/dotfiles/.conky.conf
+exec --no-startup-id conky -c $HOME/source/dotfiles/.conky_shortcuts.conf
+exec --no-startup-id feh --bg-scale $HOME/source/dotfiles/.data/intel_motherboard.jpg &
+exec --no-startup-id compton --config $HOME/source/dotfiles/.compton.conf &
