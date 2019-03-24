@@ -186,20 +186,21 @@ client.focused          #263238 #00aaff #e5e5e5 #4A4A4A
 # client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
 # disable title bar
-new_window pixel 2
+for_window [class=".*"] border pixel 2
 
 # disable focus by mouse hover
 focus_follows_mouse off
 
 ### i3-gaps options ###
 # Set inner/outer gaps
-gaps inner 14
+gaps inner 10
 gaps outer -2
 
 # Samrt gaps
 smart_gaps on
+smart_borders on
 
-# user modified options
+### user modified options ###
 bindsym $mod+F4 exec amixer -q sset Master 5%-
 bindsym $mod+F5 exec amixer -q sset Master 5%+
 bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
