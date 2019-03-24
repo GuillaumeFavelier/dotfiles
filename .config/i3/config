@@ -166,13 +166,13 @@ bar {
   colors {
     background #000000
     statusline #ffffff
-    separator #00aaff
+    separator #ff8c00
 
     ## color_class      border  backg.  text
-    focused_workspace  #00aaff #00aaff #000000
+    focused_workspace  #ff8c00 #ff8c00 #000000
     active_workspace   #686868 #aeb2c3 #222222
-    inactive_workspace #000000 #000000 #00aaff
-    urgent_workspace   #00aaff #00aaff #ffffff
+    inactive_workspace #000000 #000000 #ff8c00
+    urgent_workspace   #ff8c00 #ff8c00 #ffffff
   }
 }
 
@@ -180,7 +180,7 @@ bar {
 # class                 border  backgr. text    indicator
 # client.placeholder      #263238 #263238 #242424
 # client.background       #263238 #263238 #242424
-client.focused          #263238 #00aaff #e5e5e5 #4A4A4A
+client.focused          #263238 #ff8c00 #e5e5e5 #4A4A4A
 # client.unfocused        #263238 #263238 #777777 #222222
 # client.focused_inactive #263238 #263238 #a9a9a9 #222222
 # client.urgent           #d42121 #d42121 #f7f7f7 #d42121
@@ -207,5 +207,5 @@ bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
 exec --no-startup-id conky -c $HOME/source/dotfiles/.conky.conf
 exec --no-startup-id conky -c $HOME/source/dotfiles/.conky_shortcuts.conf
-exec --no-startup-id feh --bg-scale $HOME/source/dotfiles/.data/intel_motherboard.jpg &
-exec --no-startup-id compton --config $HOME/source/dotfiles/.compton.conf &
+exec --no-startup-id feh --bg-scale $HOME/source/dotfiles/.data/manjaro.png &
+exec --no-startup-id compton --blur-method kawase --blur-strength 12 --config $HOME/source/dotfiles/.compton.conf &
