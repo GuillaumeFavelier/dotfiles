@@ -205,8 +205,7 @@ bindsym $mod+F4 exec amixer -q sset Master 5%-
 bindsym $mod+F5 exec amixer -q sset Master 5%+
 bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
-exec --no-startup-id conky -c $HOME/Downloads/conkyrc
-#exec --no-startup-id conky -c $HOME/source/dotfiles/.conky.conf
+exec --no-startup-id conky -c $HOME/source/dotfiles/.conky.conf
 exec --no-startup-id conky -c $HOME/source/dotfiles/.conky_shortcuts.conf
 exec --no-startup-id feh --bg-scale $HOME/source/dotfiles/.data/manjaro.png &
 exec --no-startup-id compton --blur-method kawase --blur-strength 12 --config $HOME/source/dotfiles/.compton.conf &
