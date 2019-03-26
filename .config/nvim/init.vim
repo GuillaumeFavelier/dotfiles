@@ -11,6 +11,10 @@ if dein#load_state('~/.vim/dein')
   call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 	" autocomplete
   call dein#add('Shougo/deoplete.nvim')
+	" integration with git
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-rhubarb')
+  call dein#add('junegunn/gv.vim')
 	" python guide enforcement
   call dein#add('nvie/vim-flake8')
 	" themes
@@ -57,7 +61,9 @@ autocmd BufNewFile,BufRead *.vert set syntax=c
 autocmd BufNewFile,BufRead *.frag set syntax=c
 
 " maps
-nnoremap <F1> :call dein#update()<CR>
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <F2> :Gstatus<CR>
+nnoremap <F3> :Gdiff<CR>
+nnoremap <F5> :call dein#update()<CR>
+nnoremap <F8> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
