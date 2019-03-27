@@ -15,6 +15,7 @@ if dein#load_state('~/.vim/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-rhubarb')
   call dein#add('junegunn/gv.vim')
+	call dein#add('airblade/vim-gitgutter')
 	" python guide enforcement
   call dein#add('nvie/vim-flake8')
 	" themes
@@ -39,6 +40,8 @@ if dein#load_state('~/.vim/dein')
   call dein#save_state()
 endif
 
+" plugins configuration
+let g:gitgutter_enabled = 0
 let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_autoStart = 1
 let g:python3_host_prog = '/usr/bin/python3'
@@ -46,14 +49,14 @@ let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'python': ['~/.local/bin/pyls'],
     \ }
+colorscheme gotham
 
-" plugins configuration
+" nvim configuration
 syntax on
 set tabstop=2
 set shiftwidth=2
 set background=dark
 set termguicolors
-colorscheme gotham
 
 " autostart
 autocmd BufWritePost *.py call Flake8()
@@ -64,6 +67,9 @@ autocmd BufNewFile,BufRead *.frag set syntax=c
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :Gstatus<CR>
 nnoremap <F3> :Gdiff<CR>
-nnoremap <F5> :call dein#update()<CR>
-nnoremap <F8> :call LanguageClient_contextMenu()<CR>
+nnoremap <F4> :GitGutterToggle<CR>
+nnoremap <F5> :GitGutterNextHunk<CR>
+nnoremap <F6> :GitGutterPrevHunk<CR>
+nnoremap <F10> :call dein#update()<CR>
+nnoremap <F11> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
