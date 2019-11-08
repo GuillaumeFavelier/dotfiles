@@ -1,5 +1,14 @@
 [options]
-font = inconsolata 11
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = true
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+hyperlinks = true
+font = inconsolata 14
 
 
 [colors]

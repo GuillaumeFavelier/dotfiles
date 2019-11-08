@@ -34,7 +34,7 @@ bindsym $mod+KP_Add exec amixer -c 0 -- sset Master playback 1%+
 bindsym $mod+Return exec termite
 
 # lock screen
-bindsym $mod+l exec i3lock -fo
+bindsym $mod+l exec i3lock
 
 # kill focused window
 bindsym $mod+q kill
