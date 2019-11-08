@@ -6,6 +6,8 @@ filetype *.epub,*.pdf zathura %f 2>/dev/null &
 
 filetype *.html firefox-nightly %f 2> /dev/null &
 
+filetype *.mp4,*.mp3 vlc %f 2> /dev/null &
+
 fileviewer *.tar,*.tar.gz,*.tgz
  \ tar -tvf %c
 

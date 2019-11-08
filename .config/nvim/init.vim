@@ -11,6 +11,10 @@ if dein#load_state('~/.vim/dein')
   call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 	" autocomplete
   call dein#add('Shougo/deoplete.nvim')
+	" comment code
+  call dein#add('tpope/vim-commentary')
+	" starting screen
+  call dein#add('mhinz/vim-startify')
 	" integration with git
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-rhubarb')
@@ -23,6 +27,8 @@ if dein#load_state('~/.vim/dein')
 	call dein#add('fneu/breezy')
 	call dein#add('ayu-theme/ayu-vim')
 	call dein#add('whatyouhide/vim-gotham')
+	" Tags
+	call dein#add('majutsushi/tagbar')
 	" rust stl
   call dein#add('rust-lang/rust.vim')
   call dein#add('racer-rust/vim-racer')
@@ -41,13 +47,13 @@ if dein#load_state('~/.vim/dein')
 endif
 
 " plugins configuration
+let g:startify_custom_header = []
 let g:gitgutter_enabled = 0
 let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_autoStart = 1
 let g:python3_host_prog = '/usr/bin/python3'
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'python': ['~/.local/bin/pyls'],
     \ }
 colorscheme gotham
 
@@ -64,12 +70,14 @@ autocmd BufNewFile,BufRead *.vert set syntax=c
 autocmd BufNewFile,BufRead *.frag set syntax=c
 
 " maps
+vmap <C-S-c> "+y
+nmap <C-S-v> "+p
+nmap <C-right> :tabn<CR>
+nmap <C-left> :tabp<CR>
+nmap <C-n> :tabedit<CR>
+nmap <C-m><right> :tabm +1<CR>
+nmap <C-m><left> :tabm -1<CR>
 nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <F2> :Gstatus<CR>
-nnoremap <F3> :Gdiff<CR>
-nnoremap <F4> :GitGutterToggle<CR>
-nnoremap <F5> :GitGutterNextHunk<CR>
-nnoremap <F6> :GitGutterPrevHunk<CR>
+nnoremap <F2> :r! find . -type f<CR>
+nnoremap <F3> :TagbarToggle<CR>
 nnoremap <F10> :call dein#update()<CR>
-nnoremap <F11> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
