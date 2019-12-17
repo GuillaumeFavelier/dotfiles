@@ -193,18 +193,19 @@ focus_follows_mouse off
 
 ### i3-gaps options ###
 # Set inner/outer gaps
-gaps inner 10
-gaps outer -2
+#gaps inner 10
+#gaps outer -2
 
 # Samrt gaps
-smart_gaps on
-smart_borders on
+#smart_gaps on
+#smart_borders on
 
 ### user modified options ###
 bindsym $mod+F4 exec amixer -q sset Master 5%-
 bindsym $mod+F5 exec amixer -q sset Master 5%+
 bindsym $mod+F9 exec xrandr --output eDP-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1 --brightness 1
+bindsym $mod+F12 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/'
 exec --no-startup-id conky -c $HOME/source/dotfiles/.conky.conf
 exec --no-startup-id conky -c $HOME/source/dotfiles/.conky_shortcuts.conf
 exec --no-startup-id feh --bg-scale $HOME/source/dotfiles/.data/manjaro.png &
