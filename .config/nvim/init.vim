@@ -13,8 +13,6 @@ if dein#load_state('~/.vim/dein')
   call dein#add('Shougo/deoplete.nvim')
 	" comment code
   call dein#add('tpope/vim-commentary')
-	" starting screen
-  call dein#add('mhinz/vim-startify')
 	" integration with git
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-rhubarb')
@@ -47,11 +45,10 @@ if dein#load_state('~/.vim/dein')
 endif
 
 " plugins configuration
-let g:startify_custom_header = []
 let g:gitgutter_enabled = 0
+let g:python3_host_prog = '/usr/bin/python3'
 let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_autoStart = 1
-let g:python3_host_prog = '/usr/bin/python3'
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ }
@@ -78,6 +75,7 @@ nmap <C-n> :tabedit<CR>
 nmap <C-m><right> :tabm +1<CR>
 nmap <C-m><left> :tabm -1<CR>
 nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <F2> :r! find . -type f<CR>
+nnoremap <F2> :tabedit<CR>:term<CR>i
 nnoremap <F3> :TagbarToggle<CR>
 nnoremap <F10> :call dein#update()<CR>
+tnoremap <Esc> <C-\><C-n>

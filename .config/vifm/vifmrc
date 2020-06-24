@@ -4,7 +4,7 @@ filetype *.jpg,*.jpeg,*.png,*.gif feh %f 2>/dev/null &
 
 filetype *.epub,*.pdf zathura %f 2>/dev/null &
 
-filetype *.html firefox-nightly %f 2> /dev/null &
+filetype *.html firefox %f 2> /dev/null &
 
 filetype *.mp4,*.mp3 vlc %f 2> /dev/null &
 
