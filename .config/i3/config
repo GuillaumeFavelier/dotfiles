@@ -196,12 +196,12 @@ focus_follows_mouse off
 
 ### i3-gaps options ###
 # Set inner/outer gaps
-#gaps inner 10
-#gaps outer -2
+# gaps inner 10
+# gaps outer -2
 
-# Samrt gaps
-#smart_gaps on
-#smart_borders on
+# Smart gaps
+# smart_gaps on
+# smart_borders on
 
 ### user modified options ###
 bindsym $mod+F4 exec amixer -q sset Master 5%-
