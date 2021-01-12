@@ -75,7 +75,7 @@ nmap <C-n> :tabedit<CR>
 nmap <C-m><right> :tabm +1<CR>
 nmap <C-m><left> :tabm -1<CR>
 nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <F2> :tabedit<CR>:term<CR>i
-nnoremap <F3> :TagbarToggle<CR>
+nnoremap <F2> :TagbarToggle<CR>
+nnoremap <F9> :tabedit<CR>:term<CR>i
 nnoremap <F10> :call dein#update()<CR>
-tnoremap <Esc> <C-\><C-n>
+" tnoremap <Esc> <C-\><C-n>
