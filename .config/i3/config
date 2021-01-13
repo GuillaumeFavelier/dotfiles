@@ -169,13 +169,13 @@ bar {
   colors {
     background #000000
     statusline #ffffff
-    separator #ff8c00
+    separator #008cff
 
     ## color_class      border  backg.  text
-    focused_workspace  #ff8c00 #ff8c00 #000000
+    focused_workspace  #008cff #008cff #000000
     active_workspace   #686868 #aeb2c3 #222222
-    inactive_workspace #000000 #000000 #ff8c00
-    urgent_workspace   #ff8c00 #ff8c00 #ffffff
+    inactive_workspace #000000 #000000 #008cff
+    urgent_workspace   #008cff #008cff #ffffff
   }
 }
 
