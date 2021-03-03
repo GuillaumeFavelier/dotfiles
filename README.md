@@ -5,6 +5,8 @@ This set of environment configuration files and scripts is designed for Arch Lin
 Dependencies
 ------------
 
+From `pacman`:
+
 ```
 conky
 dmenu
@@ -18,3 +20,17 @@ termite
 vifm
 zathura
 ```
+
+And from `cargo`:
+
+```
+bandwhich
+bat
+du-dust
+exa
+fd
+tab
+tldr
+tokei
+```
+
