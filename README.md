@@ -12,6 +12,7 @@ conky
 dmenu
 dunst
 feh
+github-cli
 i3-wm
 i3lock
 i3status
@@ -21,7 +22,7 @@ vifm
 zathura
 ```
 
-And from `cargo`:
+From `cargo`:
 
 ```
 bandwhich
