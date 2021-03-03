@@ -1,4 +1,4 @@
-colorscheme zenburn_1
+colorscheme Default-256
 
 filetype *.jpg,*.jpeg,*.png,*.gif feh %f 2>/dev/null &
 
