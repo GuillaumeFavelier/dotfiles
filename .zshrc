@@ -1,5 +1,6 @@
 # Paths
 PATH=$PATH:~/.cargo/bin
+EDITOR=/usr/bin/nvim
 
 # Aliases
 alias pv=$HOME/source/paraview/install/bin/paraview
@@ -8,7 +9,6 @@ alias cdd="conda deactivate"
 alias mkv2gif="ffmpeg -f gif output.gif -i"
 alias mkv2mp4="ffmpeg -f mp4 output.mp4 -i"
 alias ls=exa
-alias vim=nvim
 alias cat=bat
 alias find=fd
 alias du=dust
