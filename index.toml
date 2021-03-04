@@ -1,2 +1,3 @@
 [linux]
 alacritty = "~/.alacritty.yml"
+screenrc = "~/.screenrc"
