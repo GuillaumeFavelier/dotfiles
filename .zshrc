@@ -12,6 +12,7 @@ alias ls=exa
 alias cat=bat
 alias find=fd
 alias du=dust
+alias vim=nvim
 
 # Starship
 eval "$(starship init zsh)"
