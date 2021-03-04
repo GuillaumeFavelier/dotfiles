@@ -1,3 +1,13 @@
 [linux]
 alacritty.yml = "~/.alacritty.yml"
+conky.conf = "~/.conky.conf"
+conky_shortcuts.conf = "~/.conky_shortcuts.conf"
+emacs = "~/.emacs"
 screenrc = "~/.screenrc"
+zshrc = "~/.zshrc"
+dunst = "~/.config/dunst"
+i3 = "~/.config/i3"
+nvim = "~/.config/nvim"
+starship.toml = "~/.config/starship.toml"
+termite = "~/.config/termite"
+vifm = "~/.config/vifm"
