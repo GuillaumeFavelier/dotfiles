@@ -204,8 +204,11 @@ focus_follows_mouse off
 # smart_borders on
 
 ### user modified options ###
+for_window [class="MNE" instance="MNE"] floating enable
 bindsym $mod+F4 exec amixer -q sset Master 5%-
 bindsym $mod+F5 exec amixer -q sset Master 5%+
+bindsym $mod+F6 exec firefox
+bindsym $mod+F7 exec vlc
 bindsym $mod+F9 exec xrandr --output eDP-1-1 --brightness .5
 bindsym $mod+F10 exec xrandr --output eDP-1-1 --brightness 1
 bindsym $mod+F12 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/'
