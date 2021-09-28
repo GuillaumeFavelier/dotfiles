@@ -12,6 +12,7 @@ alias ls=exa
 alias cat=bat
 alias find=fd
 alias du=dust
+alias xclip="xclip -selection clipboard"
 alias vim=nvim
 
 # Starship
